@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{width: 7px}
+::-webkit-scrollbar-thumb{background-color: #cbaa6a}
+
+:root {
+  --background: #171717;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "MedievalSharp";
+}
