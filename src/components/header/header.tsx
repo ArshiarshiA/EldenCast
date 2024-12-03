@@ -26,10 +26,10 @@ export default function Header() {
 
     const routes = [
         {route: '/', title: 'Home'},
-        {route: '/weapons', title: 'Weapons'},
-        {route: '/bosses', title: 'Bosses'},
-        {route: '/npcs', title: 'NPCs'},
-        {route: '/items', title: 'Items'},
+        {route: '/categories/weapons', title: 'Weapons'},
+        {route: '/categories/bosses', title: 'Bosses'},
+        {route: '/categories/npcs', title: 'NPCs'},
+        {route: '/categories/items', title: 'Items'},
         {route: '/about', title: 'About Me'},
     ]
 

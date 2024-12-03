@@ -29,7 +29,7 @@ export default function BossBlock({ id, image, name, healthPoints, location }: {
             <div className="relative">
                 {image == null ? (
                     <div className="flex items-center justify-center">
-                        <p>dont have image</p>
+                        <p>Not observed</p>
                     </div>
                 ) : (
                     <Image className="text-white rounded-md w-full h-[200px]" key={id} src={image} alt="boss image" width={250} height={100} />

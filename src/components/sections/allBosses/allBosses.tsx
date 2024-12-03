@@ -12,7 +12,10 @@ export default function AllBosses() {
                     <div className="capitalize pt-20 text-center">
                         <h1 className="text-5xl">ALL BOSSES</h1>
                         <p className="pb-3">you can find all of Lands Between world boss at here</p>
-                        <Link className="border border-black py-1 px-5 rounded-md text-black bg-[#cbaa6a] hover:bg-opacity-0 hover:text-white duration-200 hover:border-white" href={'/'}>
+                        <Link
+                            className="border border-black py-1 px-5 rounded-md text-black bg-[#cbaa6a] hover:bg-opacity-0 hover:text-white duration-200 hover:border-white"
+                            href={'/categories/bosses'}
+                        >
                             Bosses
                         </Link>
                         <p className="pt-3 pb-14">you can see some random boss at there</p>

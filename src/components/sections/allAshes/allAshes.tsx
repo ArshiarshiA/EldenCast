@@ -20,7 +20,7 @@ export default async function AllAshes() {
                     <Link className="text-[#cbaa6a] underline" href={'/spirits'}>Here Can You See More Spirit</Link>
                     <div className="flex items-center justify-center h-full">
                         {data.sort(() => 0.5 - Math.random()).slice(0, 4).map((item: IAshesData) => (
-                            <Link key={item.id} href={`/bosses/${item.id}`} className="w-3/12">
+                            <Link key={item.id} href={`/categories/spirits/${item.id}`} className="w-3/12">
                                 <AshesBlock {...item} />
                             </Link>
                         ))}
