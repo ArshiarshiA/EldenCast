@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ITrowData } from "@/types/global";
 
-export default function TData({ id, image, name, healthPoints, region, location, effect, type, categorieName, weight, category }: ITrowData) {
+export default function TData({ id, image, name, healthPoints, region, location, effect, type, categorieName, weight, category, role }: ITrowData) {
     return (
-        <tr>
+        <tr className="hover:scale-105 transition-all duration-300 max-[960px]:py-5 max-[960px]:border-b border-b-[#575757] max-[960px]:flex flex-col max-[960px]:text-center">
             <td>
                 <Link href={`/categories/${categorieName}/${id}`}>
                     {image ? (
-                        <Image className="rounded-md" src={image} alt="boss image" width={250} height={200} />
+                        <Image className="rounded-md max-[960px]:w-fit m-auto" src={image} alt="boss image" width={250} height={200} />
 
                     ) : (
                         <p className="text-center">Not observed</p>
@@ -26,7 +26,8 @@ export default function TData({ id, image, name, healthPoints, region, location,
             {effect && <td>{effect}</td>}
             {type && <td>{type}</td>}
             {weight && <td>{weight}</td>}
-            {category && <td>{category}</td>}
+            {category && <td>{category}</td>}            
+            {role && <td>{role}</td>}
         </tr>
     )
 }

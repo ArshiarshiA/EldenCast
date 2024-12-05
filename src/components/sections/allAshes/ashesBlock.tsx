@@ -13,7 +13,7 @@ export default function AshesBlock({ image, name }: { image: string, name: strin
     const mouseLeaveHandler = () => { if (hoverItem.current) hoverItem.current.style.maxHeight = '0' }
 
     return (
-        <div className="text-center w-fit transition-all duration-300 ease-in-out">
+        <div className="text-center w-fit m-auto transition-all duration-300 ease-in-out">
             <Image
                 onMouseEnter={mouseEnterHandler}
                 onMouseLeave={mouseLeaveHandler}

@@ -6,12 +6,6 @@ import ItemBlock from "@/app/categories/components/itemBlock"
 import { ITrowData } from "@/types/global"
 import Loading from "../../loading"
 
-interface IDynamicRoute {
-    params: {
-        id: string
-    }
-}
-
 export default function BossCardPage() {
 
     const [data , setData] = useState<{data: ITrowData}>()
@@ -26,7 +20,7 @@ export default function BossCardPage() {
 
     return (
         <section>
-            <div className="max-w-[1400px] m-auto py-36">
+            <div className="max-w-[1400px] m-auto py-36 px-10">
                 {data ? (
                     <ItemBlock {...data?.data} />
                 ) : (

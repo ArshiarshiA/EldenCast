@@ -11,7 +11,7 @@ export default function Intro() {
                 <div className="absolute top-0 w-full h-full bg-[#1b1b1bd1] px-5">
                     <div className="h-full flex items-center text-white pb-36 max-w-[1400px] m-auto">
                         <div>
-                            <h1 className="text-8xl">Foul Tarnished...</h1>
+                            <h1 className="text-5xl min-[762px]:text-8xl">Foul Tarnished...</h1>
                             <p className="text-2xl">The beginning of an adventure to find the Elden Ring</p>
                             <p className="text-xl">in the heart of the Lands Between world.</p>
                             <p>This reference will be next to you</p>

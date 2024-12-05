@@ -1,4 +1,8 @@
 type DropItems = string[]
+interface IAttackStatic{
+    name: string
+    amount: number
+}
 
 export interface ITrowData {
     id?: string
@@ -11,7 +15,13 @@ export interface ITrowData {
     type?: string
     categorieName?: string
     drops?: DropItems
+    attack?: IAttackStatic[]
+    defence?: IAttackStatic[]
     description?: string
     category?: string
+    quote?: string
+    role?: string
+    fpCost?: string
+    hpCost?: string
     weight: number
 }

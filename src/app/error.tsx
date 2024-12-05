@@ -7,7 +7,7 @@ export default function Error() {
 
     return (
         <Errors
-            desc="we have some truble here please refresh the web;"
+            desc="we have some truble here please check your concection and refresh the web;"
             butTitle="Refresh"
             event={refreshHandler}
         />

@@ -7,9 +7,9 @@ import RandomBosses from "../allBosses/randomBosses"
 export default function AllBosses() {
     return (
         <section>
-            <div className="max-w-[1200px] m-auto py-28">
-                <div className="flex justify-between">
-                    <div className="capitalize pt-20 text-center">
+            <div className="max-w-[1200px] m-auto py-28 px-10">
+                <div className="flex flex-col-reverse justify-between items-center min-[1015px]:flex-row">
+                    <div className="capitalize pt-10 min-[1015px]:pt-20 text-center">
                         <h1 className="text-5xl">ALL BOSSES</h1>
                         <p className="pb-3">you can find all of Lands Between world boss at here</p>
                         <Link
@@ -21,7 +21,7 @@ export default function AllBosses() {
                         <p className="pt-3 pb-14">you can see some random boss at there</p>
                         <Image width={200} className="-rotate-45 m-auto" src={Sword} alt="sword" />
                     </div>
-                    <div>
+                    <div className="text-center">
                         <Image width={500} src={Margit} alt="logo" />
                         <span className="text-gray-400">Margit, the Fell Omen, the first boss in the game</span>
                     </div>
