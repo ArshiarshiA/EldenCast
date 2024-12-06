@@ -1,7 +1,7 @@
 import TData from "@/app/categories/components/tData"
 import { ITrowData } from "@/types/global"
 import axios from "axios"
-import CheckCateInTable from "../components/checkCateInTable"
+import CheckCateInHead from "../components/checkCateInHead"
 
 export default async function categoriePage({params}: {params: {categor: string}}) {
 
@@ -41,6 +41,14 @@ export default async function categoriePage({params}: {params: {categor: string}
             type: secData.role,
             text: 'Role'
         },
+        {
+            type: secData.affinity,
+            text: 'Affinity'
+        },
+        {
+            type: secData.skill,
+            text: 'Skill'
+        },
     ]
 
     return (
@@ -51,7 +59,7 @@ export default async function categoriePage({params}: {params: {categor: string}
                         <tr className="max-[960px]:flex flex-col">
                             <th className="text-left border-b-2 border-b-[#606060] text-[#cbaa6a]">Image</th>
                             <th className="text-left border-b-2 border-b-[#606060] text-[#cbaa6a]">Name</th>
-                            {tHeades.map(tHead => <CheckCateInTable key={tHead.text} type={tHead.type} text={tHead.text} />)}
+                            {tHeades.map(tHead => <CheckCateInHead key={tHead.text} type={tHead.type} text={tHead.text} />)}
                         </tr>
                     </thead>
                     <tbody>

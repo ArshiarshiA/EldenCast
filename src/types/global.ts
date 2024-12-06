@@ -23,5 +23,7 @@ export interface ITrowData {
     role?: string
     fpCost?: string
     hpCost?: string
+    affinity?: string
+    skill?: string
     weight: number
 }

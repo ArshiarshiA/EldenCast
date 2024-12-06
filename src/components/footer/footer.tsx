@@ -14,6 +14,7 @@ export default function Footer() {
         { to: '/categories/classes', title: 'Classes' },
         { to: '/categories/shields', title: 'Shields' },
         { to: '/categories/spirits', title: 'Spirits' },
+        { to: '/categories/ashes', title: 'Ashes of war' },
         { to: '/categories/talismans', title: 'Talismans' },
     ]
 
@@ -52,8 +53,8 @@ export default function Footer() {
                     <div className="min-[1130px]:w-4/12 w-full pt-2">
                         <ul className="flex flex-col gap-3">
                             <li><h1 className="text-5xl border-l pl-2 border-[#cbaa6a]">Quick Links</h1></li>
-                            <li><Link href={'/'}>Faq</Link></li>
-                            <li><Link href={'/'}>Terms</Link></li>
+                            {/* <li><Link href={'/'}>Faq</Link></li>
+                            <li><Link href={'/'}>Terms</Link></li> */}
                             <li><Link href={'/about'}>About Me</Link></li>
                         </ul>
                     </div>

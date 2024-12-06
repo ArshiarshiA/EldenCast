@@ -21,7 +21,7 @@ export default function About() {
                     </p>
                     <h1 className="text-2xl pt-20">Technical stuff?</h1>
                     <p className="capitalize pt-5">
-                        The entire project is hosted on <span className="text-blue-400">React</span> and nextjs. im use  <span className="text-blue-400">tailwindcss</span> and <span className="text-purple-500">heroicon</span> to serve the ui. for api i use from <a target="_blank" className="text-[#cbaa6a] underline" href="https://eldenring.fanapis.com/">elden ring open source api</a> and <span className="text-purple-500">axios</span> for haldle requests
+                        The entire project is hosted on <span className="text-blue-400">React</span> and nextjs. im use  <span className="text-blue-400">tailwindcss</span> and <span className="text-purple-500">heroicon</span> to serve the ui. for api i use from <a target="_blank" className="text-[#cbaa6a] underline" href="https://eldenring.fanapis.com/">elden ring open source api</a> and <span className="text-purple-500">axios</span> for handle http requests
                     </p>
                 </div>
             </div>
