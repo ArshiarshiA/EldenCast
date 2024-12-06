@@ -3,52 +3,22 @@ import { ITrowData } from "@/types/global"
 import axios from "axios"
 import CheckCateInHead from "../components/checkComponents/checkCateInHead"
 
-export default async function categoriePage({params}: {params: {categor: string}}) {
+export default async function categoriePage({ params }: { params: { categor: string } }) {
 
     const categories = params.categor
     const { data } = (await axios.get(`https://eldenring.fanapis.com/api/${categories}?limit=510`)).data
     const secData = data[0]
     const tHeades = [
-        {
-            type: secData.region,
-            text: 'Region'
-        },
-        {
-            type: secData.location,
-            text: 'Location'
-        },
-        {
-            type: secData.healthPoints,
-            text: 'Hp'
-        },
-        {
-            type: secData.effect,
-            text: 'Effect'
-        },
-        {
-            type: secData.type,
-            text: 'Type'
-        },
-        {
-            type: secData.weight,
-            text: 'Weight'
-        },
-        {
-            type: secData.category,
-            text: 'Category'
-        },
-        {
-            type: secData.role,
-            text: 'Role'
-        },
-        {
-            type: secData.affinity,
-            text: 'Affinity'
-        },
-        {
-            type: secData.skill,
-            text: 'Skill'
-        },
+        { type: secData.region, text: 'Region' },
+        { type: secData.location, text: 'Location' },
+        { type: secData.healthPoints, text: 'Hp' },
+        { type: secData.effect, text: 'Effect' },
+        { type: secData.type, text: 'Type' },
+        { type: secData.weight, text: 'Weight' },
+        { type: secData.category, text: 'Category' },
+        { type: secData.role, text: 'Role' },
+        { type: secData.affinity, text: 'Affinity' },
+        { type: secData.skill, text: 'Skill' },
     ]
 
     return (

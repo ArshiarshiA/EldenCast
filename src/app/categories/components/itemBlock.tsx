@@ -8,6 +8,7 @@ import CheckCateIsExist from "./checkComponents/checkIsExist";
 import SvgOnePath from "./svgComponents/svgOnePath";
 import SvgTwoPath from "./svgComponents/svgTwoPath";
 import CombatState from "./combatState";
+import CheckDrops from "./checkComponents/checkDrops";
 
 
 export default function ItemBlock({
@@ -64,17 +65,21 @@ export default function ItemBlock({
                     <div>
                         <h1 className="text-3xl">Item you might get..!</h1>
                         <div>
-                            {drops && drops.map((item: string) => (
+                            {drops && drops.map((item: string , index) => (
                                 item.includes('Runes') ? (
-                                    <div key={item} className="flex items-center gap-1">
-                                        <Image src={Rune} alt="rune image" width={50} height={50} />
-                                        <h1 className="text-white">{item}</h1>
-                                    </div>
+                                    <CheckDrops 
+                                        loopElement={item} 
+                                        padding={false}
+                                        source={Rune} 
+                                        key={index}
+                                    />
                                 ) : (
-                                    <div key={item} className="flex items-center gap-1 pt-2">
-                                        <Image src={Items} alt="rune image" width={50} height={50} />
-                                        <h1>{item}</h1>
-                                    </div>
+                                    <CheckDrops 
+                                        loopElement={item} 
+                                        padding={true}
+                                        source={Items} 
+                                        key={index}
+                                    />
                                 )
                             ))}
                         </div>

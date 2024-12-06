@@ -5,9 +5,10 @@ import { usePathname } from "next/navigation";
 export default function Share() {
     
     const currnetPath = usePathname()
+    const categorie = currnetPath.split('/')[2]
 
     const shareHandler = () => {
-        navigator.share({title: 'share' , url: currnetPath})
+        navigator.share({title: 'Share This Page For Your Friends' , url: currnetPath, text: `share the ${categorie}`})
     }
 
     return (
