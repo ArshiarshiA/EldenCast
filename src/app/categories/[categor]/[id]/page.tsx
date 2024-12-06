@@ -5,6 +5,7 @@ import { useParams, usePathname } from "next/navigation"
 import ItemBlock from "@/app/categories/components/itemBlock"
 import { ITrowData } from "@/types/global"
 import Loading from "../../loading"
+import Share from "../../components/share"
 
 export default function BossCardPage() {
 
@@ -21,6 +22,7 @@ export default function BossCardPage() {
     return (
         <section>
             <div className="max-w-[1400px] m-auto py-36 px-10">
+                <Share />
                 {data ? (
                     <ItemBlock {...data?.data} />
                 ) : (

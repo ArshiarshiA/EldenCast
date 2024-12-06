@@ -1,4 +1,5 @@
 type DropItems = string[]
+
 interface IAttackStatic{
     name: string
     amount: number

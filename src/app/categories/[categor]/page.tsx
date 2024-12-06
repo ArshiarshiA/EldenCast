@@ -1,7 +1,7 @@
 import TData from "@/app/categories/components/tData"
 import { ITrowData } from "@/types/global"
 import axios from "axios"
-import CheckCateInHead from "../components/checkCateInHead"
+import CheckCateInHead from "../components/checkComponents/checkCateInHead"
 
 export default async function categoriePage({params}: {params: {categor: string}}) {
 
