@@ -1,15 +1,15 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    remotePatterns : [
+    remotePatterns: [
       {
-        hostname: '**',
-        pathname: '**',
-      }
-    ]
-  }
-};
+        protocol: 'https',
+        hostname: 'eldenring.fanapis.com',
+        port: '',
+        pathname: '/images/**',
+      },
+    ],
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig

@@ -1,5 +1,4 @@
 'use client'
-import Image from "next/image";
 import { useRef } from "react";
 
 export default function BossBlock({ id, image, name, healthPoints, location }: { id: string, image: string, name: string, healthPoints: string, location: string }) {
@@ -32,7 +31,7 @@ export default function BossBlock({ id, image, name, healthPoints, location }: {
                         <p>Not observed</p>
                     </div>
                 ) : (
-                    <Image className="text-white rounded-md w-full h-[200px]" key={id} src={image} alt="boss image" width={250} height={100} />
+                    <img className="text-white rounded-md w-full h-[200px]" key={id} src={image} alt="boss image" width={250} height={100} />
                 )}
                 <div
                     ref={desc}

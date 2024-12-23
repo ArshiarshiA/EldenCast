@@ -3,11 +3,19 @@ import { ITrowData } from "@/types/global"
 import axios from "axios"
 import CheckCateInHead from "../components/checkComponents/checkCateInHead"
 
-export default async function categoriePage({ params }: { params: { categor: string } }) {
+interface PageParams {
+    categor: string;
+}
 
-    const categories = params.categor
-    const { data } = (await axios.get(`https://eldenring.fanapis.com/api/${categories}?limit=510`)).data
-    const secData = data[0]
+interface PageProps {
+    params: Promise<PageParams>;
+}
+
+export default async function categoriePage({ params }:  PageProps) {
+
+    const categories = (await params).categor
+    const { data } = await axios.get(`https://eldenring.fanapis.com/api/${categories}?limit=510`)
+    const secData = data.data[0]
     const tHeades = [
         { type: secData.region, text: 'Region' },
         { type: secData.location, text: 'Location' },
@@ -33,7 +41,7 @@ export default async function categoriePage({ params }: { params: { categor: str
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map((item: ITrowData) => (
+                        {data.data.map((item: ITrowData) => (
                             <TData key={item.id} {...item} categorieName={categories} />
                         ))}
                     </tbody>

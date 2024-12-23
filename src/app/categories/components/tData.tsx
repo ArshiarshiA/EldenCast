@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { ITrowData } from "@/types/global";
 import CheckCateInBody from "./checkComponents/checkCateInBody";
@@ -12,8 +12,7 @@ export default function TData({ id, image, name, healthPoints, region, location,
             <td>
                 <Link href={`/categories/${categorieName}/${id}`}>
                     {image ? (
-                        <Image className="rounded-md max-[960px]:w-fit m-auto" src={image} alt="boss image" width={250} height={200} />
-
+                        <img className="rounded-md max-[960px]:w-fit m-auto" src={image} alt="boss image" width={250} height={200} />
                     ) : (
                         <p className="text-center">Not observed</p>
                     )}

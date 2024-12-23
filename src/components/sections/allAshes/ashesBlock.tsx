@@ -14,7 +14,7 @@ export default function AshesBlock({ image, name }: { image: string, name: strin
 
     return (
         <div className="text-center w-fit m-auto transition-all duration-300 ease-in-out">
-            <Image
+            <img
                 onMouseEnter={mouseEnterHandler}
                 onMouseLeave={mouseLeaveHandler}
                 ref={hoverHandler}

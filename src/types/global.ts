@@ -7,7 +7,7 @@ interface IAttackStatic{
 
 export interface ITrowData {
     id?: string
-    image?: string
+    image: string
     name?: string
     healthPoints?: string
     location?: string

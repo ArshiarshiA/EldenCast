@@ -1,14 +1,14 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Rune from '../../../../public/images/rune.png'
 import Items from '../../../../public/images/items.png'
 import Sword from '../../../../public/images/sword.png'
 import Shield from '../../../../public/images/shield.png'
-import { ITrowData } from "@/types/global";
 import CheckCateIsExist from "./checkComponents/checkIsExist";
 import SvgOnePath from "./svgComponents/svgOnePath";
 import SvgTwoPath from "./svgComponents/svgTwoPath";
 import CombatState from "./combatState";
 import CheckDrops from "./checkComponents/checkDrops";
+import { ITrowData } from "@/types/global";
 
 
 export default function ItemBlock({
@@ -51,7 +51,7 @@ export default function ItemBlock({
                 {healthPoints && (
                     <span className="text-sm">{healthPoints} Hp</span>
                 )}
-                <Image className="rounded-md" src={image} alt="image" width={400} height={350} />
+                <img className="rounded-md" src={image} alt="image" width={400} height={350} />
                 <h1 className="text-2xl pt-2 text-[#cbaa6a]">{name}</h1>
                 {description && <p className="text-xl py-2">Description : {description}</p>}
                 {contentSec.map((content) => (

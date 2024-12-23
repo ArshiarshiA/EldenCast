@@ -12,12 +12,13 @@ interface IBossData {
 
 export default async function RandomBosses() {
 
-    const { data } = await (await axios.get('https://eldenring.fanapis.com/api/bosses?limit=100')).data
+    const { data } = await axios.get('https://eldenring.fanapis.com/api/bosses?limit=100')
+    const sortedData = data.data.sort(() => 0.5 - Math.random()).slice(0, 4);
 
     return (
         <div>
             <div className="flex justify-center flex-wrap max-w-[1400px] m-auto">
-                {data.sort(() => 0.5 - Math.random()).slice(0, 4).map((item: IBossData) => (
+                {sortedData.map((item: IBossData) => (
                     <Link key={item.id} href={`/categories/bosses/${item.id}`} className="w-full min-[480px]:w-6/12 min-[800px]:w-4/12 min-[1100px]:w-3/12">
                         <BossBlock {...item} />
                     </Link>
