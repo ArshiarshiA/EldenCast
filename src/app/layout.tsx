@@ -2,6 +2,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Elder Cast",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <GoogleAnalytics gaId="G-NX67RMKRR8" />
       </body>
     </html>
   );
